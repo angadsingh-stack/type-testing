@@ -1,0 +1,190 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Typing Speed Test Online | Free WPM Test</title>
+  <meta name="description" content="Test your typing speed online for free. Measure your WPM, typing accuracy, and mistakes with our simple English typing test.">
+  <meta name="keywords" content="typing speed test, online typing test, WPM test, typing accuracy test, free typing test">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#2563eb">
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="#" aria-label="TypeSprint Home">
+      <span class="logo-icon">T</span>
+      TypeSprint
+    </a>
+    <span class="header-tag">Free Online Tool</span>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <span class="eyebrow">FREE TYPING TOOL</span>
+      <h1>Typing Speed Test</h1>
+      <p>Test your typing speed, improve accuracy, and track your words per minute.</p>
+    </section>
+
+    <section class="test-card" aria-labelledby="test-heading">
+      <div class="test-top">
+        <div>
+          <h2 id="test-heading">English Typing Test</h2>
+          <p class="muted">Type the passage below as accurately as possible.</p>
+        </div>
+        <label class="duration-control">
+          Test duration
+          <select id="duration">
+            <option value="30">30 seconds</option>
+            <option value="60" selected>60 seconds</option>
+            <option value="120">120 seconds</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="stats">
+        <div class="stat">
+          <span class="stat-label">Time left</span>
+          <strong id="time">60s</strong>
+        </div>
+        <div class="stat">
+          <span class="stat-label">Speed</span>
+          <strong><span id="wpm">0</span> <small>WPM</small></strong>
+        </div>
+        <div class="stat">
+          <span class="stat-label">Accuracy</span>
+          <strong><span id="accuracy">100</span><small>%</small></strong>
+        </div>
+        <div class="stat">
+          <span class="stat-label">Mistakes</span>
+          <strong id="mistakes">0</strong>
+        </div>
+      </div>
+
+      <div
+        id="passage"
+        class="passage"
+        aria-label="Text to type"
+      ></div>
+
+      <label class="input-label" for="typingInput">Your typing area</label>
+      <textarea
+        id="typingInput"
+        placeholder="Click here and start typing the passage above..."
+        spellcheck="false"
+        autocapitalize="off"
+        autocomplete="off"
+        autocorrect="off"
+        aria-describedby="typingHelp"
+      ></textarea>
+      <p id="typingHelp" class="muted help">
+        The timer starts with your first keystroke. You can change the duration before starting.
+      </p>
+
+      <div class="actions">
+        <button id="restartBtn" class="btn btn-primary" type="button">
+          Restart Test
+        </button>
+        <button id="newPassageBtn" class="btn btn-secondary" type="button">
+          New Passage
+        </button>
+      </div>
+
+      <p id="status" class="status" role="status" aria-live="polite">
+        Ready when you are. Start typing to begin!
+      </p>
+    </section>
+
+    <section id="result" class="result-card" hidden>
+      <span class="eyebrow">TEST COMPLETE</span>
+      <h2>Your Results</h2>
+      <div class="result-grid">
+        <div><strong id="finalWpm">0</strong><span>Words per minute</span></div>
+        <div><strong id="finalAccuracy">100%</strong><span>Accuracy</span></div>
+        <div><strong id="finalMistakes">0</strong><span>Mistakes</span></div>
+        <div><strong id="finalChars">0</strong><span>Characters typed</span></div>
+      </div>
+      <p id="resultMessage"></p>
+      <button id="tryAgainBtn" class="btn btn-primary" type="button">
+        Try Again
+      </button>
+    </section>
+
+    <section class="info-section">
+      <h2>How to use the typing speed test</h2>
+      <ol>
+        <li>Select a test duration: 30, 60, or 120 seconds.</li>
+        <li>Read the passage displayed above the typing box.</li>
+        <li>Start typing. The timer begins automatically.</li>
+        <li>View your WPM, accuracy, and mistakes when the test ends.</li>
+      </ol>
+
+      <h2>What is WPM in a typing test?</h2>
+      <p>
+        WPM means words per minute. It is a common measure of typing speed.
+        This tool estimates WPM by counting typed characters, including spaces,
+        and dividing by five characters per standard word.
+      </p>
+
+      <h2>Tips to improve typing accuracy</h2>
+      <ul>
+        <li>Focus on accuracy before trying to type faster.</li>
+        <li>Practice regularly using different passages.</li>
+        <li>Keep your hands relaxed and maintain a comfortable posture.</li>
+        <li>Review your mistakes after every test.</li>
+      </ul>
+    </section>
+
+    <section class="faq-section">
+      <h2>Frequently Asked Questions</h2>
+
+      <details>
+        <summary>Is this typing test free?</summary>
+        <p>Yes. This browser-based typing test is free to use.</p>
+      </details>
+
+      <details>
+        <summary>What is a good typing speed?</summary>
+        <p>
+          It depends on the task and your experience. Focus on consistent
+          accuracy and gradual improvement rather than a single target.
+        </p>
+      </details>
+
+      <details>
+        <summary>Does this tool save my typing?</summary>
+        <p>
+          No. This version calculates your results in your browser and does
+          not send your typed text to a server.
+        </p>
+      </details>
+    </section>
+
+    <section class="about-section">
+      <h2>About TypeSprint</h2>
+      <p>
+        TypeSprint is a simple typing practice tool designed to help learners
+        measure typing speed and accuracy. You can use it on a computer,
+        tablet, or mobile device.
+      </p>
+      <p>
+        Note: Results are estimates for practice and may differ from other
+        typing tests because calculation methods can vary.
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> TypeSprint. Practice at your own pace.</p>
+    <nav aria-label="Footer navigation">
+      <a href="about.html">About</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </footer>
+</body>
+</html>
